@@ -3,6 +3,7 @@ var losses = 0;
 var guessesLeft = 9;
 var letterLog = [];
 
+
 // document.getElementById("guessesLeft");
 // guessesLeft.textContent;
 
@@ -36,7 +37,7 @@ document.onkeyup = function (event) {
     if (userGuess === computerChoice) {
         wins++;
         guessesLeft = 9;
-        letterLog = [];
+        letterLog.textContent = "";
         //letterLog = "";
     } else {
         guessesLeft--;
@@ -45,6 +46,7 @@ document.onkeyup = function (event) {
     if (guessesLeft === 0) {
         losses++;
         guessesLeft = 9;
+        letterLog.textContent = "";
         /*function empty() {
             letterLog.length = 0;
         }
